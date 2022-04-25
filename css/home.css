@@ -8,7 +8,7 @@
 }
 
 .hero__left__wrapper {
-    max-width: 360px;
+    max-width: 400px;
 }
 
 .hero__imgWrapper {
@@ -64,13 +64,19 @@
         font-size: 1.8rem;
     }
 
-    .button__wrapper {
-        text-align: left;
+    .button__wrapper a{
+        margin: .5rem;
     }
 
     .hero__imgWrapper {
         max-width: none;
         width: 90%;
+    }
+}
+
+@media only screen and (min-width:320px) {
+    .button__wrapper a{
+        margin: .3rem;
     }
 }
 
@@ -207,7 +213,7 @@
 
 }
 
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 320px) {
     .ourSpecials__left {
         flex-wrap: wrap;
         gap: 10rem;

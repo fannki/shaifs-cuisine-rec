@@ -24,10 +24,14 @@
     font-family: 'Poppins';
     color: var(--black-2);
     padding: 0.5rem;
+    transition: 0.5s;
 }
 
 .nav__list li:hover .nav__link {
     color: var(--green-1);
+    font-weight: 500;
+    font-size: 2.5rem;
+    transition: 0.5s;
 }
 
 @media only screen and (max-width: 768px) {
@@ -111,11 +115,30 @@
     border-radius: 8px;
     font-size: 1.4rem;
     padding: 1.2rem 2rem;
+    transition: 1.5s;
+    border: 1px solid var(--green-1);
+}
+
+.btn:hover {
+    background: none;
+    transition: 1.5s;
+    /* border: var(--lightGreen-1); */
+    color: var(--green-1);
+    border: 1px solid var(--green-1);
 }
 
 .primary-btn {
     color: var(--white-1);
     background: var(--green-1);
+    transition: 1.5s;
+}
+
+.unprimary-btn:hover{
+    background: var(--green-1);
+    transition: 1.5s;
+    border: var(--lightGreen-1);
+    color: var(--white-1);
+    border: 1px solid var(--green-1);
 }
 
 @media only screen and (min-width:768px) {
@@ -338,10 +361,10 @@ footer {
 
 .dishGrid__item__img img {
     object-fit: cover;
-    border-radius: 12px ;
+    border-radius: 12px;
 }
 
-.dishGrid__item__title{
+.dishGrid__item__title {
     font-size: 1.4rem;
     line-height: 1.3em;
     font-weight: 500;
@@ -349,63 +372,68 @@ footer {
     margin-bottom: 0.5rem;
 }
 
-.dishGrid__item__price{
+.dishGrid__item__price {
     font-size: 1.4rem;
     color: var(--green-1);
     font-weight: 600;
     margin-bottom: 0.5rem;
 }
 
-.dishGrid__item__stars{
+.dishGrid__item__stars {
     min-height: 15px;
     width: max-content;
 }
 
 @media only screen and (min-width:768px) {
-    .dishGrid__title{
+    .dishGrid__title {
         font-size: 2.4rem;
     }
-    .dishGrid__wrapper{
+
+    .dishGrid__wrapper {
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         gap: 3rem;
     }
-    .dishGrid__item{
+
+    .dishGrid__item {
         flex-direction: row;
         padding: 1.5rem;
         gap: 1rem;
     }
-    .dishGrid__item__title{
+
+    .dishGrid__item__title {
         font-size: 2.4rem;
         margin-bottom: 1rem;
     }
-    .dishGrid__item__price{
+
+    .dishGrid__item__price {
         font-size: 2rem;
         margin-bottom: 1rem;
     }
 }
 
 /* Form Styles */
-#form{
+#form {
     padding: 5rem 0;
-    
+
 }
-.form__title{
+
+.form__title {
     font-size: 1.8rem;
     color: var(--black-1);
     font-weight: 600;
 }
 
-.form__wrapper{
+.form__wrapper {
     padding: 3rem 0;
 }
 
-.form__wrapper form{
+.form__wrapper form {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
 }
 
-.form__group label{
+.form__group label {
     font-size: 1.6rem;
     font-family: Poppins;
     color: var(--black-2);
@@ -414,7 +442,7 @@ footer {
 
 .form__group input,
 .form__group textarea,
-.form__group select{
+.form__group select {
     width: 100%;
     border: none;
     background-color: var(--lightGreen-1);
@@ -427,11 +455,12 @@ footer {
     color: var(--black-2);
 }
 
-.form__group textarea{
+.form__group textarea {
     resize: vertical;
+    margin-bottom: 1rem;
 }
 
-.form__wrapper button[type=submit]{
+.form__wrapper button[type=submit] {
     width: max-content;
     border: none;
     padding: 1rem 4rem;
@@ -439,26 +468,30 @@ footer {
     letter-spacing: 0.1rem;
 }
 
-@media only screen and (min-width:768px){
-    .form__title{
+@media only screen and (min-width:768px) {
+    .form__title {
         font-size: 3.6rem;
     }
-    .form__wrapper{
+
+    .form__wrapper {
         padding: 5rem 0;
     }
 
-    .form__wrapper form{
+    .form__wrapper form {
         grid-template-columns: 1fr 1fr;
     }
-    .form__group__full{
+
+    .form__group__full {
         grid-column: 1/3;
     }
-    .form__group label{
+
+    .form__group label {
         font-size: 1.8rem;
     }
+
     .form__group input,
     .form__group textarea,
-    .form__group select{
+    .form__group select {
         font-size: 1.8rem;
         padding: 2rem;
         margin-top: 1.5rem;
